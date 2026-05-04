@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+
+    
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md" style="background-color: #2f4f4f !important; padding: 12px 0;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <span class="fs-4 fw-light" style="letter-spacing: 2px; color: #e8f0ef;">Kişisel Web Sitem</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            style="border-color: #a8c5c0;">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-uppercase fs-6">
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="hakkimda.html">Hakkımda</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="cv.html">Özgeçmiş</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="sehir.html">Şehrim</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="miras.html">Mirasımız</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="iletisim.html">İletişim</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="login.php">Giriş</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="ilgi-hero">
+    <h1>İlgi Alanlarım</h1>
+    <p>film &nbsp;·&nbsp; dizi &nbsp;·&nbsp; bilim kurgu &nbsp;·&nbsp; kore</p>
+</div>
+<div class="hero-alt"></div>
+
+<!-- İÇERİK -->
+<main class="container my-5">
+
+    <!-- Sekmeler -->
+    <div class="sekme-wrap">
+        <button class="sekme-btn aktif" onclick="sekmeGoster('aksiyon', this)">
+            <i class="fa fa-film me-2"></i>Aksiyon Filmleri
+        </button>
+        <button class="sekme-btn" onclick="sekmeGoster('bilimkurgu', this)">
+            <i class="fa fa-rocket me-2"></i>Bilim Kurgu Filmleri
+        </button>
+        <button class="sekme-btn" onclick="sekmeGoster('kore', this)">
+            <i class="fa fa-tv me-2"></i>Kore Dizileri
+        </button>
+    </div>
+
+    <!-- Aksiyon -->
+    <div id="sekme-aksiyon" class="sekme-icerik aktif mt-4">
+        <h2 class="bolum-baslik">Aksiyon Filmleri</h2>
+        <div id="aksiyon-grid" class="row">
+            <div class="yukleniyor col-12">
+                <i class="fa fa-spinner"></i>
+                Yükleniyor...
+            </div>
+        </div>
+    </div>
+
+    <!-- Bilim Kurgu -->
+    <div id="sekme-bilimkurgu" class="sekme-icerik mt-4">
+        <h2 class="bolum-baslik">Bilim Kurgu Filmleri</h2>
+        <div id="bilimkurgu-grid" class="row">
+            <div class="yukleniyor col-12">
+                <i class="fa fa-spinner"></i>
+                Yükleniyor...
+            </div>
+        </div>
+    </div>
+
+    <!-- Kore Dizileri -->
+    <div id="sekme-kore" class="sekme-icerik mt-4">
+        <h2 class="bolum-baslik">Kore Dizileri</h2>
+        <div id="kore-grid" class="row">
+            <div class="yukleniyor col-12">
+                <i class="fa fa-spinner"></i>
+                Yükleniyor...
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background-color: #2f4f4f; color: #e8f0ef; padding: 50px 0 20px;">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-4 mb-4">
+                <h4 style="letter-spacing: 2px; font-weight: 300;">Kişisel Web Sitem</h4>
+                <p style="color: #a8c5c0; font-size: 0.9rem; margin-top: 10px;">
+                    Gezilerim, hobilerim ve hayatımdan kareler.
+                </p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h6 style="letter-spacing: 1px; text-transform: uppercase; color: #a8c5c0; margin-bottom: 15px;">Sayfalar</h6>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a href="hakkimda.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Hakkımda</a></li>
+                    <li><a href="cv.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Özgeçmiş</a></li>
+                    <li><a href="sehir.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Şehrim</a></li>
+                    <li><a href="miras.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Mirasımız</a></li>
+                    <li><a href="iletisim.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">İletişim</a></li>
+                    <li><a href="ilgi_alanlarim.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">İlgi Alanlarım</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h6 style="letter-spacing: 1px; text-transform: uppercase; color: #a8c5c0; margin-bottom: 15px;">Sosyal Medya</h6>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://www.twitter.com" target="_blank" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
+                            <i class="fa fa-twitter me-2"></i>Twitter
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://www.instagram.com" target="_blank" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
+                            <i class="fa fa-instagram me-2"></i>Instagram
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="mailto:" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
+                            <i class="fa fa-envelope me-2"></i>E-posta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #4a7a72; padding-top: 15px; text-align: center;">
+            <p style="color: #a8c5c0; font-size: 0.8rem; margin: 0;">© 2026 Kişisel Web Sitem</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// =============================================
+const API_KEY = 'API_ANAHTARI';
+// =============================================
+
+const POSTER_BASE = 'https://image.tmdb.org/t/p/w500';
+
+// Hangi sekmelerin yüklendiğini takip et
+var yuklendi = { aksiyon: false, bilimkurgu: false, kore: false };
+
+// Sekme geçişi
+function sekmeGoster(id, btn) {
+    document.querySelectorAll('.sekme-icerik').forEach(function(el) {
+        el.classList.remove('aktif');
+    });
+    document.querySelectorAll('.sekme-btn').forEach(function(el) {
+        el.classList.remove('aktif');
+    });
+    document.getElementById('sekme-' + id).classList.add('aktif');
+    btn.classList.add('aktif');
+
+    // Sadece ilk açılışta yükle
+    if (!yuklendi[id]) {
+        yuklendi[id] = true;
+        if (id === 'aksiyon') filmCek('aksiyon-grid', 28);       // genre 28 = Action
+        if (id === 'bilimkurgu') filmCek('bilimkurgu-grid', 878); // genre 878 = Sci-Fi
+        if (id === 'kore') koreCek('kore-grid');
+    }
+}
+
+// Film kartı oluştur
+function kartOlustur(item, tip) {
+    var poster = item.poster_path
+        ? '<img src="' + POSTER_BASE + item.poster_path + '" alt="' + (item.title || item.name) + '">'
+        : '<div class="poster-yok"><i class="fa fa-film"></i></div>';
+
+    var baslik = item.title || item.name || 'Bilinmiyor';
+    var tarih = (item.release_date || item.first_air_date || '').substring(0, 4);
+    var puan = item.vote_average ? item.vote_average.toFixed(1) : '-';
+    var aciklama = item.overview
+        ? (item.overview.length > 120 ? item.overview.substring(0, 120) + '...' : item.overview)
+        : 'Açıklama mevcut değil.';
+
+    return '<div class="col-6 col-md-4 col-lg-3">' +
+        '<div class="film-kart">' +
+            poster +
+            '<div class="film-kart-body">' +
+                '<div>' +
+                    '<h5>' + baslik + '</h5>' +
+                    '<div class="yil">' + (tarih || '—') + '</div>' +
+                    '<span class="puan"><i class="fa fa-star"></i> ' + puan + '</span>' +
+                '</div>' +
+                '<p class="aciklama">' + aciklama + '</p>' +
+            '</div>' +
+        '</div>' +
+    '</div>';
+}
+
+// Film çek (türe göre)
+function filmCek(gridId, genreId) {
+    var url = 'https://api.themoviedb.org/3/discover/movie'
+        + '?api_key=' + API_KEY
+        + '&language=tr-TR'
+        + '&sort_by=popularity.desc'
+        + '&with_genres=' + genreId
+        + '&page=1';
+
+    fetch(url)
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            var grid = document.getElementById(gridId);
+            if (!data.results || data.results.length === 0) {
+                grid.innerHTML = '<div class="hata-kutu col-12">Sonuç bulunamadı.</div>';
+                return;
+            }
+            var html = '';
+            data.results.slice(0, 12).forEach(function(film) {
+                html += kartOlustur(film, 'film');
+            });
+            grid.innerHTML = html;
+        })
+        .catch(function(err) {
+            document.getElementById(gridId).innerHTML =
+                '<div class="hata-kutu col-12">' +
+                '<i class="fa fa-exclamation-triangle me-2"></i>' +
+                'Veriler yüklenemedi. API anahtarını kontrol et.' +
+                '</div>';
+        });
+}
+
+// Kore dizisi çek
+function koreCek(gridId) {
+    var url = 'https://api.themoviedb.org/3/discover/tv'
+        + '?api_key=' + API_KEY
+        + '&language=tr-TR'
+        + '&sort_by=popularity.desc'
+        + '&with_original_language=ko'
+        + '&page=1';
+
+    fetch(url)
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            var grid = document.getElementById(gridId);
+            if (!data.results || data.results.length === 0) {
+                grid.innerHTML = '<div class="hata-kutu col-12">Sonuç bulunamadı.</div>';
+                return;
+            }
+            var html = '';
+            data.results.slice(0, 12).forEach(function(dizi) {
+                html += kartOlustur(dizi, 'dizi');
+            });
+            grid.innerHTML = html;
+        })
+        .catch(function(err) {
+            document.getElementById(gridId).innerHTML =
+                '<div class="hata-kutu col-12">' +
+                '<i class="fa fa-exclamation-triangle me-2"></i>' +
+                'Veriler yüklenemedi. API anahtarını kontrol et.' +
+                '</div>';
+        });
+}
+
+// Sayfa açılınca ilk sekmeyi yükle
+window.addEventListener('load', function() {
+    yuklendi.aksiyon = true;
+    filmCek('aksiyon-grid', 28);
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

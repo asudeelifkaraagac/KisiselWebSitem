@@ -1,10 +1,27 @@
-/* Genel Ayarlar */
+/* ==========================================================================
+   1. GENEL AYARLAR VE SIFIRLAMA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     padding-top: 0;
     background-color: #e8f0ef;
 }
 
+/* ==========================================================================
+   2. NAVBAR VE FOOTER (ORTAK ALANLAR)
+   ========================================================================== */
 .navbar {
     background-color: #2f4f4f !important;
     padding: 12px 0;
@@ -29,68 +46,19 @@ body {
     color: #a8c5c0 !important;
 }
 
-/* Mobil Cihazlar İçinDüzeltmeler */
-@media (max-width: 768px) {
-    .navbar {
-        background-color: #2f4f4f  !important; /* Mobilde menü açılınca beyaz arkaplan */
-    }
-
-    .slider-btn {
-        padding: 14px 18px;
-    }
+footer a:hover {
+    color: #a8c5c0 !important;
+    transition: color 0.2s ease;
 }
 
-/* Mobilde slider metinlerini biraz daha küçük görünmesi için */
-@media (max-width: 768px) {
-    .hobi-description h3 {
-        font-size: 1.5rem;
-    }
-
-    .etkinlik-description h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Alt Slider (İçerideki resimler) için ayar */
-.sub-slider-img {
-    height: 600px;
-    object-fit: contain; /* cover Resim uzasa bile yayılmasını veya bozulmasını engeller, alanı kaplar */
-    width: 100%;
-    border-radius: 15px; /* Köşeleri biraz daha yumuşatarak görsele şıklık katar */
-    min-height: 300px;
-    aspect-ratio: 16 / 9;
-}
-
-/* Kategori Başlığı */
-.hobby-title {
-    font-size: 2rem;
-    color: #2f4f4f;
-    margin-bottom: 20px;
-}
-
-.etkinlik-title {
-    font-size: 2rem;
-    color: #2f4f4f;
-    margin-bottom: 20px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Yan kaydırma çubuğunu engeller */
-}
-
+/* ==========================================================================
+   3. SLIDER VE HOBİ BÖLÜMLERİ
+   ========================================================================== */
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(47,79,79,0.75);
+    background: rgba(47, 79, 79, 0.75);
     color: white;
     border: none;
     padding: 10px 14px;
@@ -99,10 +67,10 @@ body, html {
     border-radius: 6px;
     z-index: 10;
 }
+
 .slider-btn.prev { left: 8px; }
 .slider-btn.next { right: 8px; }
-.slider-btn:hover { background: rgba(47,79,79,1); }
-
+.slider-btn:hover { background: rgba(47, 79, 79, 1); }
 
 .mySlide {
     display: none;
@@ -110,18 +78,187 @@ body, html {
     transition: opacity 0.35s ease;
 }
 
-
-footer a:hover {
-    color: #a8c5c0 !important;
-    transition: color 0.2s ease;
+.sub-slider-img {
+    height: 600px;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 15px;
+    min-height: 300px;
+    aspect-ratio: 16 / 9;
 }
 
+.hobby-title, .etkinlik-title {
+    font-size: 2rem;
+    color: #2f4f4f;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   4. İLGİ ALANLARIM (API VE FİLM BÖLÜMÜ)
+   ========================================================================== */
+
+/* Hero Alanı */
+.ilgi-hero {
+    background-color: #2f4f4f;
+    padding: 60px 0 40px;
+    text-align: center;
+    color: #e8f0ef;
+}
+
+.ilgi-hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #e8f0ef;
+    margin: 0;
+}
+
+.ilgi-hero p {
+    color: #a8c5c0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.hero-alt {
+    height: 6px;
+    background: linear-gradient(to right, #2f4f4f, #4a7a72, #2f4f4f);
+}
+
+/* Sekme Butonları */
+.sekme-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px 0 10px;
+    flex-wrap: wrap;
+}
+
+.sekme-btn {
+    padding: 10px 28px;
+    border: 2px solid #2f4f4f;
+    background: transparent;
+    color: #2f4f4f;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sekme-btn:hover, .sekme-btn.aktif {
+    background: #2f4f4f;
+    color: #e8f0ef;
+}
+
+.bolum-baslik {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #2f4f4f;
+    border-left: 4px solid #4a7a72;
+    padding-left: 16px;
+    margin-bottom: 30px;
+}
+
+/* Film Kartları Tasarımı */
+.film-kart {
+    background: #fff;
+    border: 1px solid #d0e0dc;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(47,79,79,0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(47,79,79,0.15);
+}
+
+.film-kart img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.film-kart-body {
+    padding: 16px 18px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.film-kart-body h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2f4f4f;
+    margin-bottom: 6px;
+}
+
+.film-kart-body .puan {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #2f4f4f;
+    color: #e8f0ef;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+/* API Durumları (Yükleniyor/Hata) */
+.yukleniyor {
+    text-align: center;
+    padding: 60px 0;
+    color: #2f4f4f;
+}
+
+.yukleniyor i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+    animation: dondur 1s linear infinite;
+}
+
+@keyframes dondur {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.poster-yok {
+    width: 100%;
+    height: 320px;
+    background-color: #d6e8e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a7a72;
+    font-size: 2.5rem;
+}
+
+/* Sekme Gizleme/Gösterme Mantığı */
+.sekme-icerik { display: none; }
+.sekme-icerik.aktif { display: block; }
+
+/* ==========================================================================
+   5. ŞEHİR SAYFASI
+   ========================================================================== */
 .sehir-hero {
     background-color: #2f4f4f;
     padding: 60px 0 40px;
     text-align: center;
     color: #e8f0ef;
 }
+
 .sehir-hero h1 {
     font-size: 3rem;
     font-weight: 300;
@@ -129,36 +266,42 @@ footer a:hover {
     text-transform: uppercase;
     color: #e8f0ef;
 }
+
 .sehir-hero p {
     color: #a8c5c0;
     font-size: 1rem;
     letter-spacing: 2px;
     margin-top: 8px;
 }
+
 .sehir-hero-alt {
     height: 6px;
     background: linear-gradient(to right, #2f4f4f, #4a7a72, #2f4f4f);
 }
 
-/* Slider */
+/* Şehir Slider */
 .sehir-slider-wrap {
     position: relative;
     background-color: #2f4f4f;
     padding: 25px 40px 30px;
 }
+
 .sehir-slider-inner {
     border: 3px solid #4a7a72;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
+
 .sehirSlide { display: none; opacity: 0; transition: opacity 0.35s ease; }
+
 .sehirSlide img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
 }
+
 .sehir-slide-btn {
     position: absolute;
     top: 50%;
@@ -172,9 +315,11 @@ footer a:hover {
     border-radius: 6px;
     z-index: 10;
 }
+
 .sehir-slide-btn.prev { left: 50px; }
 .sehir-slide-btn.next { right: 50px; }
 .sehir-slide-btn:hover { background: rgba(47,79,79,1); }
+
 .sehir-counter {
     text-align: center;
     margin-top: 10px;
@@ -182,13 +327,15 @@ footer a:hover {
     color: #a8c5c0;
 }
 
-/* İçerik bölümleri */
+/* Şehir İçerik Bölümleri */
 .sehir-section {
     padding: 60px 0;
 }
+
 .sehir-section:nth-child(even) {
     background-color: #f0f5f4;
 }
+
 .sehir-section-title {
     font-size: 1.8rem;
     font-weight: 400;
@@ -197,13 +344,14 @@ footer a:hover {
     padding-left: 16px;
     margin-bottom: 24px;
 }
+
 .sehir-section p {
     color: #444;
     line-height: 1.9;
     font-size: 0.97rem;
 }
 
-/* Yer kartları */
+/* Yer Kartları */
 .yer-kart {
     background: #fff;
     border: 1px solid #d0e0dc;
@@ -213,37 +361,44 @@ footer a:hover {
     box-shadow: 0 2px 12px rgba(47,79,79,0.07);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .yer-kart:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 20px rgba(47,79,79,0.13);
 }
+
 .yer-kart img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
+
 .yer-kart-body {
     padding: 20px 22px 24px;
 }
+
 .yer-kart-body h4 {
     font-size: 1.15rem;
     font-weight: 600;
     color: #2f4f4f;
     margin-bottom: 10px;
 }
+
 .yer-kart-body p {
     font-size: 0.88rem;
     color: #555;
     line-height: 1.75;
     margin: 0;
 }
-/* Bilgi kutusu */
+
+/* Bilgi Kutusu */
 .bilgi-kutu {
     background-color: #2f4f4f;
     color: #e8f0ef;
     border-radius: 12px;
     padding: 30px 35px;
 }
+
 .bilgi-kutu h5 {
     color: #a8c5c0;
     font-size: 0.75rem;
@@ -251,20 +406,17 @@ footer a:hover {
     text-transform: uppercase;
     margin-bottom: 14px;
 }
+
 .bilgi-kutu p {
     color: #e8f0ef;
     font-size: 0.92rem;
     line-height: 1.9;
     margin: 0;
 }
-@media (max-width: 768px) {
-    .sehir-hero h1 { font-size: 2rem; }
-    .sehirSlide img { height: 240px; }
-    .sehir-slide-btn.prev { left: 10px; }
-    .sehir-slide-btn.next { right: 10px; }
-    .sehir-slider-wrap { padding: 15px 15px 20px; }
-}
-/*miras*/
+
+/* ==========================================================================
+   6. MİRAS (ÖZEL GÖRSEL AYARLARI)
+   ========================================================================== */
 
 /* Tıp Müzesi aside içindeki resim */
 aside img.img-fluid {
@@ -278,4 +430,45 @@ figure img.img-fluid {
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+
+/* ==========================================================================
+   7. MOBİL UYUMLULUK (RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: #2f4f4f !important;
+    }
+
+    .slider-btn {
+        padding: 14px 18px;
+    }
+
+    .hobi-description h3,
+    .etkinlik-description h3 {
+        font-size: 1.5rem;
+    }
+
+    .ilgi-hero h1 {
+        font-size: 2rem;
+    }
+
+    .film-kart img, .poster-yok {
+        height: 240px;
+    }
+
+    .sehir-hero h1 {
+        font-size: 2rem;
+    }
+
+    .sehirSlide img {
+        height: 240px;
+    }
+
+    .sehir-slide-btn.prev { left: 10px; }
+    .sehir-slide-btn.next { right: 10px; }
+
+    .sehir-slider-wrap {
+        padding: 15px 15px 20px;
+    }
 }
