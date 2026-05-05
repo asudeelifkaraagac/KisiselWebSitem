@@ -9,6 +9,9 @@
 
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
     <div class="card shadow p-4" style="width: 400px;">
+        
+         <a href="index.html" class="btn btn-outline-secondary btn-sm mb-3">← Ana Sayfa</a>
+
         <h2 class="text-center mb-4">Öğrenci Girişi</h2>
 
         <?php if(isset($_GET['error']) && $_GET['error'] == '1'): ?>

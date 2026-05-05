@@ -145,7 +145,7 @@
 
 <script>
 // =============================================
-const API_KEY = 'API_ANAHTARI';
+const API_KEY = '9fc137149397d4ee132346462eeca8b9';
 // =============================================
 
 const POSTER_BASE = 'https://image.tmdb.org/t/p/w500';
@@ -186,7 +186,7 @@ function kartOlustur(item, tip) {
         ? (item.overview.length > 120 ? item.overview.substring(0, 120) + '...' : item.overview)
         : 'Açıklama mevcut değil.';
 
-    return '<div class="col-6 col-md-4 col-lg-3">' +
+    return '<div class="col-6 col-md-4 col-lg-3 mb-4">' +
         '<div class="film-kart">' +
             poster +
             '<div class="film-kart-body">' +

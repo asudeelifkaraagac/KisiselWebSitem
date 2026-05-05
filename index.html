@@ -25,7 +25,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-uppercase fs-6">
-                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="hakkimda.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="hakkimda.html">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="sehir.html">Şehrim</a></li>
@@ -85,7 +85,7 @@
             <button class="slider-btn prev" onclick="changeSlide('elisi', -1)">&#10094;</button>
             <button class="slider-btn next" onclick="changeSlide('elisi', 1)">&#10095;</button>
           </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-elisi">1 / 2</div>
+          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-elisi">1 / 4</div>
           <p class="text-center mt-2 fw-bold">İnsanı dinlendiren en güzel aktiviteler</p>
         </div>
 
@@ -100,7 +100,7 @@
             <button class="slider-btn prev" onclick="changeSlide('spor', -1)">&#10094;</button>
             <button class="slider-btn next" onclick="changeSlide('spor', 1)">&#10095;</button>
           </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-spor">1 / 2</div>
+          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-spor">1 / 3</div>
           <p class="text-center mt-2 fw-bold">İyi hissettiren ve iyi gelen aktivitelerim</p>
         </div>
 
@@ -123,7 +123,7 @@
             <button class="slider-btn prev" onclick="changeSlide('trabzon', -1)">&#10094;</button>
             <button class="slider-btn next" onclick="changeSlide('trabzon', 1)">&#10095;</button>
           </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-trabzon">1 / 2</div>
+          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-trabzon">1 / 4</div>
           <p class="text-center mt-2 fw-bold">Trabzon gezimden resimler. Uzungöl ve Sümela Manastırı </p>
         </div>
 
@@ -139,7 +139,7 @@
             <button class="slider-btn prev" onclick="changeSlide('antalya', -1)">&#10094;</button>
             <button class="slider-btn next" onclick="changeSlide('antalya', 1)">&#10095;</button>
           </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-antalya">1 / 2</div>
+          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-antalya">1 / 4</div>
           <p class="text-center mt-2 fw-bold">Antalya gezimden resimler </p>
         </div>
     
@@ -211,7 +211,7 @@
       function changeSlide(id, dir, isAuto = false) {
         if (isAnimating[id]) return;
     
-        // Eğer kullanıcı manuel bastıysa , mevcut zamanlayıcıyı sıfırla ve yeniden kur
+        // Eğer kullanıcı manuel bastıysa, mevcut zamanlayıcıyı sıfırla ve yeniden kur
         if (!isAuto) {
             resetAutoSlide(id);
         }
@@ -257,7 +257,7 @@
               clearInterval(timers[id]);
           }
 
-          // 1.5 saniye n sonra her 3 saniyede bir
+          // 1.5 saniye sonra her 3 saniyede bir 
           timers[id] = setTimeout(function() {
               // İlk otomatik kaydırmayı başlat
               changeSlide(id, 1, true);
