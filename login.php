@@ -25,7 +25,7 @@
             </div>
             <div class="mb-3">
                 <label>Şifre (Öğrenci No)</label>
-                <input type="password" name="password" id="password" class="form-control" required placeholder="b2412100001">
+                <input type="password" name="password" id="password" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
         </form>
@@ -39,7 +39,7 @@
         let password = document.getElementById('password').value.trim();
         
         // Regex: b + en az 8, en fazla 12 rakam + @sakarya.edu.tr
-        // 10 rakam kesin değilse \d+ (bir veya daha fazla rakam) kullanmak daha sağlıklıdır.
+        // 10 rakam kesin değilse \d+ (bir veya daha fazla rakam) 
         const emailRegex = /^b\d{8,12}@sakarya\.edu\.tr$/; 
         
         if (email === "" || password === "") {

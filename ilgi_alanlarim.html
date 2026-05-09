@@ -13,21 +13,21 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-md" style="background-color: #2f4f4f !important; padding: 12px 0;">
+ <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <span class="fs-4 fw-light" style="letter-spacing: 2px; color: #e8f0ef;">Kişisel Web Sitem</span>
+            <span class="fs-4 fw-light navbar-brand-text">Kişisel Web Sitem</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            style="border-color: #a8c5c0;">
-            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+
+        <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto text-uppercase fs-6">
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="hakkimda.html">Hakkımda</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="cv.html">Özgeçmiş</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-custom" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom active" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="sehir.html">Şehrim</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="miras.html">Mirasımız</a></li>
                 <li class="nav-item"><a class="nav-link nav-link-custom" href="iletisim.html">İletişim</a></li>
@@ -95,52 +95,36 @@
 
 </main>
 
-<!-- FOOTER -->
-<footer style="background-color: #2f4f4f; color: #e8f0ef; padding: 50px 0 20px;">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-md-4 mb-4">
-                <h4 style="letter-spacing: 2px; font-weight: 300;">Kişisel Web Sitem</h4>
-                <p style="color: #a8c5c0; font-size: 0.9rem; margin-top: 10px;">
-                    Gezilerim, hobilerim ve hayatımdan kareler.
-                </p>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h6 style="letter-spacing: 1px; text-transform: uppercase; color: #a8c5c0; margin-bottom: 15px;">Sayfalar</h6>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li><a href="hakkimda.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Hakkımda</a></li>
-                    <li><a href="cv.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Özgeçmiş</a></li>
-                    <li><a href="sehir.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Şehrim</a></li>
-                    <li><a href="miras.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Mirasımız</a></li>
-                    <li><a href="iletisim.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">İletişim</a></li>
-                    <li><a href="ilgi_alanlarim.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">İlgi Alanlarım</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h6 style="letter-spacing: 1px; text-transform: uppercase; color: #a8c5c0; margin-bottom: 15px;">Sosyal Medya</h6>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 8px;">
-                        <a href="https://www.twitter.com" target="_blank" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
-                            <i class="fa fa-twitter me-2"></i>Twitter
-                        </a>
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                        <a href="https://www.instagram.com" target="_blank" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
-                            <i class="fa fa-instagram me-2"></i>Instagram
-                        </a>
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                        <a href="mailto:" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
-                            <i class="fa fa-envelope me-2"></i>E-posta
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div style="border-top: 1px solid #4a7a72; padding-top: 15px; text-align: center;">
-            <p style="color: #a8c5c0; font-size: 0.8rem; margin: 0;">© 2026 Kişisel Web Sitem</p>
-        </div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-4 mb-4">
+        <h4>Kişisel Web Sitem</h4>
+        <p class="footer-desc">En sevdiğim tarzda film ve diziler.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h6 class="footer-heading">Sayfalar</h6>
+        <ul>
+          <li><a href="hakkimda.html">Hakkımda</a></li>
+          <li><a href="cv.html">Özgeçmiş</a></li>
+          <li><a href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+          <li><a href="sehir.html">Şehrim</a></li>
+          <li><a href="miras.html">Mirasımız</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h6 class="footer-heading">Sosyal Medya</h6>
+        <ul>
+          <li><a href="https://twitter.com"><i class="fa fa-twitter me-2"></i>Twitter</a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram me-2"></i>Instagram</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kişisel Web Sitem</p>
+    </div>
+  </div>
 </footer>
 
 <script>

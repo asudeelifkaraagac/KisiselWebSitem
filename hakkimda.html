@@ -11,16 +11,15 @@
 </head>
 <body>
 
-<div style="position: relative;">
-    <nav class="navbar navbar-expand-md" style="background-color: #2f4f4f !important; padding: 12px 0;">
+<div class="navbar-video-wrap">
+    <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <span class="fs-4 fw-light" style="letter-spacing: 2px; color: #e8f0ef;">Kişisel Web Sitem</span>
+                <span class="fs-4 fw-light navbar-brand-text">Kişisel Web Sitem</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                style="border-color: #a8c5c0;">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,10 +36,9 @@
         </div>
     </nav>
 
-    <!-- Video artık navbar'ın altında, çerçeveli -->
-    <div style="background-color: #2f4f4f; padding: 20px 40px 30px;">
-        <div style="border: 3px solid #4a7a72; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-            <video autoplay muted loop playsinline style="display: block; width: 100%; max-height: 600px; object-fit: cover;">
+    <div class="video-wrapper">
+        <div class="video-cerceve">
+            <video autoplay muted loop playsinline>
                 <source src="resimler/arkaplan.mp4" type="video/mp4">
                 Tarayıcınız video etiketini desteklemiyor.
             </video>
@@ -48,157 +46,129 @@
     </div>
 </div>
 
-    <main id="icerik" class="container my-5 py-5">
+<main id="icerik" class="container my-5 py-5">
     <div class="row align-items-center mb-5">
         <div class="col-md-7 mb-4">
-            <h2 class="display-5 mb-4" style="color: #2f4f4f;">Benim Hakkımda</h2>
+            <h2 class="display-5 mb-4 sayfa-baslik">Benim Hakkımda</h2>
             <p class="lead">Merhaba! Ben Asude Elif Karaağaç. 21 yaşındayım. Bilgisayar Mühendisliği öğrencisiyim. Bu sayfada sizlere hobilerimden ve geçmiş etkinliklerimden bahsedeceğim.</p>
         </div>
     </div>
 
     <div class="row">
-      <div class="col-12">
-        <h2 class="display-5 mb-4 text-center" style="color: #2f4f4f;">Hobilerim</h2>
+        <div class="col-12">
+            <h2 class="display-5 mb-4 text-center sayfa-baslik">Hobilerim</h2>
 
-        <!-- FOTOĞRAFÇILIK -->
-        <div id="hobby-fotograf" class="hobby-block mb-5">
-          <h3 class="hobby-title text-center">Fotoğrafçılık</h3>
-          <div class="slider-wrap position-relative">
-            <div class="mySlide active"><img src="resimler/foto1.jpeg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/foto2.jpeg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/foto3.jpeg" class="sub-slider-img d-block w-100"></div>
-            <button class="slider-btn prev" onclick="changeSlide('fotograf', -1)">&#10094;</button>
-            <button class="slider-btn next" onclick="changeSlide('fotograf', 1)">&#10095;</button>
-          </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-fotograf">1 / 3</div>
-          <p class="text-center mt-2 fw-bold">Doğa ve manzara fotoğrafları çekmek benim için bir tutku</p>
+            <!-- FOTOĞRAFÇILIK -->
+            <div id="hobby-fotograf" class="hobby-block mb-5">
+                <h3 class="hobby-title text-center">Fotoğrafçılık</h3>
+                <div class="slider-wrap position-relative">
+                    <div class="mySlide active"><img src="resimler/foto1.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/foto2.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/foto3.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <button class="slider-btn prev" onclick="changeSlide('fotograf', -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="changeSlide('fotograf', 1)">&#10095;</button>
+                </div>
+                <div class="text-center mt-1 slider-counter" id="counter-fotograf">1 / 3</div>
+                <p class="text-center mt-2 fw-bold">Doğa ve manzara fotoğrafları çekmek benim için bir tutku</p>
+            </div>
+
+            <!-- EL İŞİ & RESİM -->
+            <div id="hobby-elisi" class="hobby-block mb-5">
+                <h3 class="hobby-title text-center">El İşi & Resim</h3>
+                <div class="slider-wrap position-relative">
+                    <div class="mySlide active"><img src="resimler/el2.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/el3.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/el1.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/el4.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <button class="slider-btn prev" onclick="changeSlide('elisi', -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="changeSlide('elisi', 1)">&#10095;</button>
+                </div>
+                <div class="text-center mt-1 slider-counter" id="counter-elisi">1 / 4</div>
+                <p class="text-center mt-2 fw-bold">İnsanı dinlendiren en güzel aktiviteler</p>
+            </div>
+
+            <!-- SPOR -->
+            <div id="hobby-spor" class="hobby-block mb-5">
+                <h3 class="hobby-title text-center">Spor</h3>
+                <div class="slider-wrap position-relative">
+                    <div class="mySlide active"><img src="resimler/spor1.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/spor2.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/spor3.jpg" class="sub-slider-img d-block w-100"></div>
+                    <button class="slider-btn prev" onclick="changeSlide('spor', -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="changeSlide('spor', 1)">&#10095;</button>
+                </div>
+                <div class="text-center mt-1 slider-counter" id="counter-spor">1 / 3</div>
+                <p class="text-center mt-2 fw-bold">İyi hissettiren ve iyi gelen aktivitelerim</p>
+            </div>
         </div>
-
-        <!-- EL İŞİ & RESİM -->
-        <div id="hobby-elisi" class="hobby-block mb-5">
-          <h3 class="hobby-title text-center">El İşi & Resim</h3>
-          <div class="slider-wrap position-relative">
-            <div class="mySlide active"><img src="resimler/el2.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/el3.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/el1.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/el4.jpeg" class="sub-slider-img d-block w-100"></div>
-            <button class="slider-btn prev" onclick="changeSlide('elisi', -1)">&#10094;</button>
-            <button class="slider-btn next" onclick="changeSlide('elisi', 1)">&#10095;</button>
-          </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-elisi">1 / 2</div>
-          <p class="text-center mt-2 fw-bold">İnsanı dinlendiren en güzel aktiviteler</p>
-        </div>
-
-          <!-- Spor -->
-        <div id="hobby-spor" class="hobby-block mb-5">
-          <h3 class="hobby-title text-center">Spor</h3>
-          <div class="slider-wrap position-relative">
-            <div class="mySlide active"><img src="resimler/spor1.jpeg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/spor2.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/spor3.jpg" class="sub-slider-img d-block w-100"></div>
-            
-            <button class="slider-btn prev" onclick="changeSlide('spor', -1)">&#10094;</button>
-            <button class="slider-btn next" onclick="changeSlide('spor', 1)">&#10095;</button>
-          </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-spor">1 / 2</div>
-          <p class="text-center mt-2 fw-bold">İyi hissettiren ve iyi gelen aktivitelerim</p>
-        </div>
-
-      </div>
     </div>
 
     <div class="row">
-      <div class="col-12">
-        <h2 class="display-5 mb-4 text-center" style="color: #2f4f4f;">Etkinliklerim</h2>
-        
-          <!-- Trabzon -->
-        <div id="etkinlik-trabzon" class="etkinlik-block mb-5">
-          <h3 class="etkinlik-title text-center">Trabzon Gezisi</h3>
-          <div class="slider-wrap position-relative">
-            <div class="mySlide active"><img src="resimler/trabzon1.jpeg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/trabzon2.jpeg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/trabzon3.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/trabzon4.jpg" class="sub-slider-img d-block w-100"></div>
-            
-            <button class="slider-btn prev" onclick="changeSlide('trabzon', -1)">&#10094;</button>
-            <button class="slider-btn next" onclick="changeSlide('trabzon', 1)">&#10095;</button>
-          </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-trabzon">1 / 2</div>
-          <p class="text-center mt-2 fw-bold">Trabzon gezimden resimler. Uzungöl ve Sümela Manastırı </p>
-        </div>
+        <div class="col-12">
+            <h2 class="display-5 mb-4 text-center sayfa-baslik">Etkinliklerim</h2>
 
-          <!-- Antalya -->
-        <div id="etkinlik-antalya" class="etkinlik-block mb-5">
-          <h3 class="etkinlik-title text-center">Antalya Gezisi</h3>
-          <div class="slider-wrap position-relative">
-            <div class="mySlide active"><img src="resimler/antalya1.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/antalya2.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/antalya3.jpg" class="sub-slider-img d-block w-100"></div>
-            <div class="mySlide"><img src="resimler/antalya4.jpg" class="sub-slider-img d-block w-100"></div>
-            
-            <button class="slider-btn prev" onclick="changeSlide('antalya', -1)">&#10094;</button>
-            <button class="slider-btn next" onclick="changeSlide('antalya', 1)">&#10095;</button>
-          </div>
-          <div class="text-center mt-1" style="font-size:0.85rem; color:#888;" id="counter-antalya">1 / 2</div>
-          <p class="text-center mt-2 fw-bold">Antalya gezimden resimler </p>
-        </div>
-    
+            <!-- Trabzon -->
+            <div id="etkinlik-trabzon" class="etkinlik-block mb-5">
+                <h3 class="etkinlik-title text-center">Trabzon Gezisi</h3>
+                <div class="slider-wrap position-relative">
+                    <div class="mySlide active"><img src="resimler/trabzon1.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/trabzon2.jpeg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/trabzon3.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/trabzon4.jpg" class="sub-slider-img d-block w-100"></div>
+                    <button class="slider-btn prev" onclick="changeSlide('trabzon', -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="changeSlide('trabzon', 1)">&#10095;</button>
+                </div>
+                <div class="text-center mt-1 slider-counter" id="counter-trabzon">1 / 4</div>
+                <p class="text-center mt-2 fw-bold">Trabzon gezimden resimler. Uzungöl ve Sümela Manastırı</p>
+            </div>
+
+            <!-- Antalya -->
+            <div id="etkinlik-antalya" class="etkinlik-block mb-5">
+                <h3 class="etkinlik-title text-center">Antalya Gezisi</h3>
+                <div class="slider-wrap position-relative">
+                    <div class="mySlide active"><img src="resimler/antalya1.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/antalya2.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/antalya3.jpg" class="sub-slider-img d-block w-100"></div>
+                    <div class="mySlide"><img src="resimler/antalya4.jpg" class="sub-slider-img d-block w-100"></div>
+                    <button class="slider-btn prev" onclick="changeSlide('antalya', -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="changeSlide('antalya', 1)">&#10095;</button>
+                </div>
+                <div class="text-center mt-1 slider-counter" id="counter-antalya">1 / 4</div>
+                <p class="text-center mt-2 fw-bold">Antalya gezimden resimler</p>
+            </div>
         </div>
     </div>
+</main>
 
-    </main> 
 
-    <footer style="background-color: #2f4f4f; color: #e8f0ef; padding: 50px 0 20px;">
+    <footer class="site-footer">
       <div class="container">
         <div class="row mb-4">
-
-          <!-- Sol: İsim ve açıklama -->
           <div class="col-md-4 mb-4">
-            <h4 style="letter-spacing: 2px; font-weight: 300;">Kişisel Web Sitem</h4>
-            <p style="color: #a8c5c0; font-size: 0.9rem; margin-top: 10px;">
-              Gezilerim, hobilerim ve hayatımdan kareler.
-            </p>
+            <h4>Kişisel Web Sitem</h4>
+            <p class="footer-desc">Gezilerim, hobilerim ve hayatımdan kareler.</p>
           </div>
-
-          <!-- Orta: Sayfalar -->
           <div class="col-md-4 mb-4">
-            <h6 style="letter-spacing: 1px; text-transform: uppercase; color: #a8c5c0; margin-bottom: 15px;">Sayfalar</h6>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li><a href="hakkimda.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Hakkımda</a></li>
-              <li><a href="cv.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Özgeçmiş</a></li>
-              <li><a href="sehir.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Şehrim</a></li>
-              <li><a href="miras.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">Mirasımız</a></li>
-              <li><a href="iletisim.html" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem; line-height: 2;">İletişim</a></li>
+            <h6 class="footer-heading">Sayfalar</h6>
+            <ul>
+              <li><a href="hakkimda.html">Hakkımda</a></li>
+              <li><a href="cv.html">Özgeçmiş</a></li>
+              <li><a href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+              <li><a href="sehir.html">Şehrim</a></li>
+              <li><a href="miras.html">Mirasımız</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
             </ul>
           </div>
-
-          <!-- Sağ: Sosyal medya -->
           <div class="col-md-4 mb-4">
-            <h6 style="letter-spacing: 1px; text-transform: uppercase; color: #a8c5c0; margin-bottom: 15px;">Sosyal Medya</h6>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="margin-bottom: 8px;">
-                <a href="https://twitter.com" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
-                  <i class="fa fa-twitter me-2"></i>Twitter
-                </a>
-              </li>
-              <li style="margin-bottom: 8px;">
-                <a href="https://www.instagram.com" target="_blank" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
-                    <i class="fa fa-instagram me-2"></i>Instagram
-                </a>
-            </li>
-              <li style="margin-bottom: 8px;">
-                <a href="mailto:" style="color: #e8f0ef; text-decoration: none; font-size: 0.9rem;">
-                  <i class="fa fa-envelope me-2"></i>E-posta
-                </a>
-              </li>
+            <h6 class="footer-heading">Sosyal Medya</h6>
+            <ul>
+              <li><a href="https://twitter.com"><i class="fa fa-twitter me-2"></i>Twitter</a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram me-2"></i>Instagram</a></li>
             </ul>
           </div>
-
         </div>
-
-        <!-- Alt çizgi -->
-        <div style="border-top: 1px solid #4a7a72; padding-top: 15px; text-align: center;">
-          <p style="color: #a8c5c0; font-size: 0.8rem; margin: 0;">© 2026 Kişisel Web Sitem</p>
+        <div class="footer-bottom">
+          <p>© 2026 Kişisel Web Sitem</p>
         </div>
       </div>
     </footer>
