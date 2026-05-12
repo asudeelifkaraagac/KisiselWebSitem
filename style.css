@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. GENEL AYARLAR VE SIFIRLAMA
+   GENEL AYARLAR 
    ========================================================================== */
 * {
     margin: 0;
@@ -20,7 +20,7 @@ body {
 }
 
 /* ==========================================================================
-   2. NAVBAR VE FOOTER (ORTAK ALANLAR)
+   NAVBAR
    ========================================================================== */
 .navbar {
     background-color: #2f4f4f !important;
@@ -52,7 +52,36 @@ footer a:hover {
 }
 
 /* ==========================================================================
-   3. SLIDER VE HOBİ BÖLÜMLERİ
+   HAKKIMDA SAYFASI
+   ========================================================================== */
+
+/* Video wrapper */
+.video-wrapper {
+    background-color: #2f4f4f;
+    padding: 20px 40px 30px;
+}
+
+.video-cerceve {
+    border: 3px solid #4a7a72;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.video-cerceve video {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* Sayfa başlıkları */
+.sayfa-baslik {
+    color: #2f4f4f;
+}
+
+/* ==========================================================================
+   SLIDER VE HOBİ 
    ========================================================================== */
 .slider-btn {
     position: absolute;
@@ -87,6 +116,28 @@ footer a:hover {
     aspect-ratio: 16 / 9;
 }
 
+/* Slider sayaç */
+.slider-counter {
+    font-size: 0.85rem;
+    color: #888;
+}
+.navbar-video-wrap {
+    position: relative;
+}
+
+.navbar-brand-text {
+    letter-spacing: 2px;
+    color: #e8f0ef;
+}
+
+.navbar-toggler-custom {
+    border-color: #a8c5c0;
+}
+
+.navbar-toggler-icon-custom {
+    filter: invert(1);
+}
+
 .hobby-title, .etkinlik-title {
     font-size: 2rem;
     color: #2f4f4f;
@@ -94,7 +145,40 @@ footer a:hover {
 }
 
 /* ==========================================================================
-   4. İLGİ ALANLARIM (API VE FİLM BÖLÜMÜ)
+   CV SAYFASI
+   ========================================================================== */
+.cv-baslik {
+    color: #2f4f4f;
+}
+
+.cv-hr {
+    width: 100px;
+    margin: auto;
+    border: 2px solid #4a7a72;
+    opacity: 1;
+}
+
+.bolum-baslik-sol {
+    color: #2f4f4f;
+    border-left: 5px solid #4a7a72;
+    padding-left: 15px;
+}
+
+.yetenek-kutu {
+    padding: 12px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+.custom-cv-table thead tr {
+    background-color: #2f4f4f;
+    color: #e8f0ef;
+}
+
+/* ==========================================================================
+   İLGİ ALANLARIM 
    ========================================================================== */
 
 /* Hero Alanı */
@@ -250,7 +334,7 @@ footer a:hover {
 .sekme-icerik.aktif { display: block; }
 
 /* ==========================================================================
-   5. ŞEHİR SAYFASI
+    ŞEHİR SAYFASI
    ========================================================================== */
 .sehir-hero {
     background-color: #2f4f4f;
@@ -277,6 +361,29 @@ footer a:hover {
 .sehir-hero-alt {
     height: 6px;
     background: linear-gradient(to right, #2f4f4f, #4a7a72, #2f4f4f);
+}
+
+.nufus-cerceve {
+    border: 3px solid #4a7a72;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(47,79,79,0.2);
+}
+
+.nufus-cerceve img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.sehir-alinti {
+    color: #2f4f4f;
+    font-style: italic;
+}
+
+.bilgi-kutu-tam {
+    height: 100%;
 }
 
 /* Şehir Slider */
@@ -414,8 +521,51 @@ footer a:hover {
     margin: 0;
 }
 
+
 /* ==========================================================================
-   6. MİRAS (ÖZEL GÖRSEL AYARLARI)
+   MİRAS SAYFASI
+   ========================================================================== */
+.miras-baslik {
+    color: #2f4f4f;
+}
+
+.miras-hr {
+    width: 80px;
+    margin: 20px auto;
+    border: 2px solid #4a7a72;
+    opacity: 1;
+}
+
+.miras-h2 {
+    color: #2f4f4f;
+}
+
+.miras-h4 {
+    color: #4a7a72;
+}
+
+.miras-bilgi-kutu {
+    background-color: #f1f7f6;
+    border-left: 4px solid #4a7a72;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.miras-aside-baslik {
+    color: #2f4f4f;
+}
+
+.miras-icon {
+    color: #4a7a72;
+}
+
+.miras-alinti {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+/* ==========================================================================
+   MİRAS (ÖZEL GÖRSEL AYARLARI)
    ========================================================================== */
 
 /* Tıp Müzesi aside içindeki resim */
@@ -433,7 +583,7 @@ figure img.img-fluid {
 }
 
 /* ==========================================================================
-   7. İLETİŞİM FORMU
+   İLETİŞİM FORMU
    ========================================================================== */
 .error-msg {
     color: #dc3545;
@@ -456,7 +606,7 @@ figure img.img-fluid {
 }
 
 /* ==========================================================================
-   8. MOBİL UYUMLULUK (RESPONSIVE)
+   MOBİL UYUMLULUK (RESPONSIVE)
    ========================================================================== */
 @media (max-width: 768px) {
     .navbar {
@@ -497,7 +647,7 @@ figure img.img-fluid {
 }
 
 /* ==========================================================================
-   9. FOOTER
+   FOOTER
    ========================================================================== */
 .site-footer {
     background-color: #2f4f4f;
@@ -555,157 +705,4 @@ figure img.img-fluid {
     color: #a8c5c0;
     font-size: 0.8rem;
     margin: 0;
-}
-
-/* ==========================================================================
-   10. HAKKIMDA SAYFASI
-   ========================================================================== */
-
-/* Video wrapper */
-.video-wrapper {
-    background-color: #2f4f4f;
-    padding: 20px 40px 30px;
-}
-
-.video-cerceve {
-    border: 3px solid #4a7a72;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.video-cerceve video {
-    display: block;
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-}
-
-/* Sayfa başlıkları */
-.sayfa-baslik {
-    color: #2f4f4f;
-}
-
-/* Slider sayaç */
-.slider-counter {
-    font-size: 0.85rem;
-    color: #888;
-}
-.navbar-video-wrap {
-    position: relative;
-}
-
-.navbar-brand-text {
-    letter-spacing: 2px;
-    color: #e8f0ef;
-}
-
-.navbar-toggler-custom {
-    border-color: #a8c5c0;
-}
-
-.navbar-toggler-icon-custom {
-    filter: invert(1);
-}
-
-/* ==========================================================================
-   11. CV SAYFASI
-   ========================================================================== */
-.cv-baslik {
-    color: #2f4f4f;
-}
-
-.cv-hr {
-    width: 100px;
-    margin: auto;
-    border: 2px solid #4a7a72;
-    opacity: 1;
-}
-
-.bolum-baslik-sol {
-    color: #2f4f4f;
-    border-left: 5px solid #4a7a72;
-    padding-left: 15px;
-}
-
-.yetenek-kutu {
-    padding: 12px;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    text-align: center;
-}
-
-.custom-cv-table thead tr {
-    background-color: #2f4f4f;
-    color: #e8f0ef;
-}
-
-/* ==========================================================================
-   12. MİRAS SAYFASI
-   ========================================================================== */
-.miras-baslik {
-    color: #2f4f4f;
-}
-
-.miras-hr {
-    width: 80px;
-    margin: 20px auto;
-    border: 2px solid #4a7a72;
-    opacity: 1;
-}
-
-.miras-h2 {
-    color: #2f4f4f;
-}
-
-.miras-h4 {
-    color: #4a7a72;
-}
-
-.miras-bilgi-kutu {
-    background-color: #f1f7f6;
-    border-left: 4px solid #4a7a72;
-    padding: 12px;
-    border-radius: 4px;
-}
-
-.miras-aside-baslik {
-    color: #2f4f4f;
-}
-
-.miras-icon {
-    color: #4a7a72;
-}
-
-.miras-alinti {
-    color: #666;
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-/* ==========================================================================
-   13. ŞEHİR SAYFASI EK STİLLER
-   ========================================================================== */
-.nufus-cerceve {
-    border: 3px solid #4a7a72;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(47,79,79,0.2);
-}
-
-.nufus-cerceve img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-}
-
-.sehir-alinti {
-    color: #2f4f4f;
-    font-style: italic;
-}
-
-.bilgi-kutu-tam {
-    height: 100%;
 }
